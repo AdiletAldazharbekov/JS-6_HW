@@ -6,10 +6,11 @@ const arr = [
   console.log(arr)
   let arr2=[]
 
-const deleteEach3=(arr)=>{
-    for (let i=0; i<arr.length; i+=3){
-            arr2.push(arr[i])
+const deleteEach3=(arr, n)=>{
+    for (let i=n-1; i<arr.length; i+=n){
+        delete arr[i]
     }
 }
-deleteEach3(arr)
-console.log(arr2)
+let n = prompt('Число',3)
+deleteEach3(arr,3)
+console.log(arr)
